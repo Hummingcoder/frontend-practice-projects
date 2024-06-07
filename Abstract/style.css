@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "GT America Standard", sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#toggle-nav {
+  width: 100%;
+  background: rgb(36, 36, 36);
+  height: 40vh;
+  position: absolute;
+  top: 90px;
+  border-top: 2px solid #cdcdcd;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 100;
+  z-index: 100;
+}
+#toggle-nav button {
+  background: none;
+  font-size: 20px;
+  border: none;
+  color: white;
+  width: 70%;
+  padding: 0.3em 0%;
+}
+#toggle-nav button:hover {
+  text-decoration: underline;
+}
+#toggle-nav #toggle-btn1 {
+  border-bottom: 2px solid white;
+}
+#nav {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  padding: 0 6%;
+}
+#nav #nav-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+#nav h1 {
+  font-size: 25px;
+  font-weight: 100;
+  padding: 0 10px;
+  border-right: 2px solid white;
+  margin: 10px;
+}
+#nav a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+#nav a:hover {
+  font-size: 20px;
+  color: white;
+  text-decoration: underline;
+}
+#mob-btn {
+  display: none;
+}
+#nav button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+}
+#nav-btn1 {
+  background: #191b1a;
+  padding: 9px 19px;
+  border: 1px solid #ffffffff;
+}
+#nav-btn2 {
+  border: none;
+  background: #4d5ed5;
+}
+
+#search-div {
+  width: 100%;
+  min-height: 50vh;
+  background: #dadbf1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+#search-div h1 {
+  font-size: 70px;
+  font-weight: 100;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+#search-div input {
+  width: 100%;
+  font-size: 16px;
+  padding: 15px 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.116);
+  outline: none;
+  border: none;
+}
+#search-div div {
+  position: relative;
+  width: 700px;
+  height: fit-content;
+  border: 1px solid black;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#search-div div:hover {
+  color: #4d5ed5;
+  border-color: #4d5ed5;
+}
+#search-div #button {
+  height: 100%;
+  font-size: 30px;
+  border: none;
+  background: transparent;
+  font-weight: 900;
+  position: absolute;
+  right: 2%;
+  top: 0%;
+  cursor: pointer;
+}
+main {
+  width: 100%;
+  padding: 5vh 10vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10% 6%;
+}
+.txt {
+  margin-left: 20px;
+}
+.item .pic {
+  height: clamp(40px, 6vw, 80px);
+}
+.head {
+  font-size: clamp(16px, 2vw, 25px);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.long {
+  font-size: clamp(16px, 2vw, 25px);
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+.link {
+  font-size: clamp(16px, 2vw, 20px);
+  text-decoration: none;
+  color: #4d5ed5;
+}
+
+footer {
+  width: 100%;
+  color: #ffffffff;
+  background: #000;
+  min-height: 40vh;
+  padding: 4%;
+  display: flex;
+}
+.foot-er {
+  width: 30%;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+ul {
+  list-style: none;
+  padding: 1vw;
+  padding-left: 0px;
+  font-size: clamp(16px, 1.2vw, 20px);
+  margin-bottom: 20px;
+}
+.footer li {
+  padding: 5px 0px;
+}
+.footer li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footer {
+  width: 65%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.bold {
+  font-weight: 600;
+  font-size: clamp(18px, 1.5vw, 22px);
+}
+.bold-smol {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 830px) {
+  #nav-btn1,
+  #nav-btn2 {
+    display: none;
+  }
+  #mob-btn {
+    display: inline-block;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+  }
+  #search-div div {
+    width: 80%;
+  }
+  #search-div h1 {
+    font-size: max(30px, 8vw);
+  }
+  .footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 680px) {
+  #search-div {
+    min-height: 40vh;
+  }
+  main {
+    display: inline-block;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer {
+    display: inline-block;
+  }
+  .foot-er {
+    text-align: start;
+    display: inline-block;
+  }
+}
